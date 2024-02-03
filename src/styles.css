@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root{
+    --light: #a8a8a8;
+}
+
+::placeholder {
+    color: var(--light);
+    opacity: 1; /* Firefox */
+  }
+
+.flex{
+    display: flex;
+}
+
+
+
+/* Chat List */
+aside{
+    background: #f2f2f2;
+    width: 25vw;
+    padding: 25px;
+    height: 100vh;
+    display: inline-block;
+}
+
+.searchChat{
+    background: #f3f3f3;
+    padding: 12px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.searchChat > input{
+    background-color: transparent;
+    border: none;
+    margin-left: 16px;
+    color: var(--light);
+    outline: none;
+    width: 80%;
+}
+
+.searchChat > i{
+    color: var(--light);
+}
+
+.addNewChat{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.addNewChat > div{
+    border: 2px solid var(--light);
+    border-radius: 50%;
+    padding: 3px 6px;   
+}
+
+.chatList{
+    display: flex;
+    flex-flow: column;
+}
+
+.chatContainer{
+    gap: 8px;
+    color: initial;
+    text-decoration: none;
+    margin-bottom: 15px; 
+    transition: 0.2s linear;
+}
+
+.chatContainer:hover{
+    background: #f3f3f3;
+}
+
+.dpContainer {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.chatSubCOntainer{
+    flex-flow: column;
+    justify-content: space-evenly;
+}
+
+
+
+/* Right Section Conversation */
+
+
+main{
+    display: inline-block;
+    vertical-align: top;
+
+    width: 75%;
+    height: 100vh;
+}
+
+nav{
+    padding: 1rem;
+    height: 53px;
+    z-index: 1;
+    background-color: #00DBDE;
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+    color: white;
+
+}
+
+nav > p{
+    text-align: center;
+    font-weight: 600;
+}
+
+.conversation{
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    position: relative;
+    height: calc(100vh - 53px);
+    background-color: rgb(255, 255, 255);
+    padding: 0 10rem 10rem 8rem;
+}
+
+.msgInputCon{
+    position: absolute;
+    bottom: 1rem;
+    left: 4rem;
+    background-color: white;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem 0 1rem;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.msgInputCon > input{
+    width: 90%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    height: 100%;
+
+}
+
+.msgInputCon > button{
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.msg{
+    margin: 30px 0;
+    font-size: 1rem;
+    max-width: 300px;
+    padding: 5px 15px;
+    border-radius: 10px; 
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    color: white; 
+    border: none;
+}
+
+.mymsg{
+    text-align: right;
+    align-self: flex-end;
+    background-image: linear-gradient(
+       to right, #3b9887, #006a58);
+       color: white;
+}
+
+/* popup list */
+
+.addChat{
+    position: absolute;
+    top: 25%;
+    left: 33%;
+    background-color: white;
+    width: 500px;
+    height: 300px;
+    padding: 0 16px;
+    z-index: 2;
+    border: 1px solid black;
+    overflow: scroll;
+}
+
+.addChat > h3{
+    text-align: center;
+    margin: 15px 0 15px 0;
+}
+
+.addChat > div{
+    padding: 8px;
+    border-bottom: 1px solid black;
+    margin-bottom: 6px;
+    align-items: center;
+    gap: 18px;
+    cursor: pointer;
+}
+
+/* welcome */
+
+.welcome{
+    text-align: center;
+    margin-top: 33vh;
+    font-size: larger;
+}
+
+
+

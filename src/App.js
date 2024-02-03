@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import ChatList from "./Component/ChatList";
+import Conversation from "./Component/Conversation";
+import ChatContextProvider from "./chatContext";
 
 function App() {
+  
+  const routes = createBrowserRouter([{
+    path: "/",
+    element: <ChatList />,
+    children: [
+      {index: true, element: <Conversation />},
+      {path: "/:id", element: <Conversation /> }
+    ]
+  }])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <ChatContextProvider>
+     <RouterProvider router={routes} />
+    </ChatContextProvider >
+
   );
 }
 
